@@ -26,15 +26,14 @@ yarn-error.log*
 # vercel
 .vercel
 
+# cloudflare
+.open-next/
+.wrangler/
+worker-*.js
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# database
-*.db
-db/
-prisma/*.db
-prisma/migrations/dev.db*
 
 # IDE
 .vscode/
@@ -46,4 +45,4 @@ prisma/migrations/dev.db*
 Thumbs.db
 
 # env example is fine to commit
-!.env.example
+# (env.example removed - app no longer needs DATABASE_URL)
