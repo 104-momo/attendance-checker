@@ -28,6 +28,7 @@ yarn-error.log*
 
 # cloudflare
 .open-next/
+.open-next-pages/
 .wrangler/
 worker-*.js
 

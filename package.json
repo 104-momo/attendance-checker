@@ -7,10 +7,10 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "preview": "opennextjs-cloudflare && wrangler dev",
-    "build:cf": "opennextjs-cloudflare",
-    "deploy": "opennextjs-cloudflare && wrangler pages deploy .open-next",
-    "cf-typegen": "wrangler types --env cloudflare"
+    "preview": "npm run build:cf && node scripts/prepare-pages.mjs && wrangler pages dev .open-next-pages",
+    "build:cf": "opennextjs-cloudflare build && node scripts/prepare-pages.mjs",
+    "deploy": "npm run build:cf && wrangler pages deploy .open-next-pages --branch=cloudflare",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
